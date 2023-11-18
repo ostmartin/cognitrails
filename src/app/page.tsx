@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const StarterPage: React.FC = () => {
@@ -5,7 +6,16 @@ const StarterPage: React.FC = () => {
       <div className="container m-auto w-full">
           <header className="flex flex-row justify-between p-4 font-bold">
               <div className="flex items-center">
-                  <Link href="/">CogniTrails</Link>
+                  <Link href="/" className="flex items-center gap-2">
+                    <Image
+                        src="/cognitrails-logo.png"
+                        alt="CogniTraills Logo"
+                        width={30}
+                        height={30}
+                        className="flex rounded-md"
+                    />
+                    CogniTrails
+                  </Link>
               </div>
               <div className="flex gap-2">
                   <Link className="text-white bg-black rounded-md py-1 px-2" href="/workspace/profile">Login</Link>
