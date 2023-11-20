@@ -1,6 +1,6 @@
 import { T_Trail } from "@/types/data";
 
-const TrailPage: React.FC<T_Trail> = ({completed = false}) => {
+const TrailPage: React.FC<T_Trail> = ({completed = false, title, stages}) => {
     return (
         <div className="h-[95%] overflow-auto flex flex-row w-[inherit] relative">
             <div className="overflow-auto flex flex-row gap-4 basis-full">
