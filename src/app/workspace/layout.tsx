@@ -22,7 +22,7 @@ const WorkspaceLayout = ({
     children: React.ReactNode
 }) => {
     return (
-        <main className="m-auto w-screen px-2 flex h-full">
+        <main className="m-auto px-2 flex h-full">
             <SideBar links={LINKS}/>
             <div className="h-screen w-[100vw] tablet:w-[85vw]">
                 <WorkspaceHeader/>

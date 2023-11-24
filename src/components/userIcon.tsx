@@ -3,27 +3,32 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { auth } from "@/firebase-admin/firebase";
+import { authFirebase } from "@/firebase-admin/firebase";
+
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useAuthStateCustom } from "@/hooks/use-auth-state";
 
 import userIcon from '../../public/profile-user-svgrepo-com.svg';
 
 export const UserIcon = () => {
-    const [showIcon, setShowIcon] = useState(false);
+    // const [showIcon, setShowIcon] = useState(false);
 
-    useEffect(() => {
-        auth.onAuthStateChanged((user) => {
-            if (user) {
-                setShowIcon(true);
-            } else {
-                setShowIcon(false);
-            }
-        })
-    }, [])
+    // useEffect(() => {
+    //     authFirebase.onAuthStateChanged((user) => {
+    //         if (user) {
+    //             setShowIcon(true);
+    //         } else {
+    //             setShowIcon(false);
+    //         }
+    //     })
+    // }, [])
+    const {value} = useAuthStateCustom(authFirebase);
+    // const [loading, value, error] = useAuthState(authFirebase)
 
     return (
         <>
             {
-                showIcon ?
+                value ?
                 <Link href='/workspace/profile'>
                     <Image
                         src={userIcon}

@@ -11,10 +11,9 @@ export const metadata: Metadata = {
 }
 
 export default async function RootLayout({
-  children, auth
+  children
 }: {
-  children: React.ReactNode,
-  auth: React.ReactNode
+  children: React.ReactNode
 }) {
 
   return (
@@ -22,7 +21,6 @@ export default async function RootLayout({
       <body className={inter.className}>
         <div className='container m-auto w-full'>
           {children}
-          {auth}
         </div>
       </body>
     </html>

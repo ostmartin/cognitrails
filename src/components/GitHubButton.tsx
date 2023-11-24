@@ -2,7 +2,7 @@
 import { GithubAuthProvider, signInWithPopup } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
 
-import { auth } from '@/firebase-admin/firebase';
+import { authFirebase } from '@/firebase-admin/firebase';
 
 export const GitHubButton = () => {
     const router = useRouter();
@@ -11,9 +11,9 @@ export const GitHubButton = () => {
         
         const provider = new GithubAuthProvider();
 
-        signInWithPopup(auth, provider)
+        signInWithPopup(authFirebase, provider)
             .then(() => {
-                router.push('/')
+                router.push('/workspace/profile')
             })
             .catch(console.log)
     }
