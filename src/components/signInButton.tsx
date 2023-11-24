@@ -1,29 +1,12 @@
 'use client'
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { authFirebase } from "@/firebase-admin/firebase";
-
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useAuthStateCustom } from "@/hooks/use-auth-state";
+import { useAuthState } from "@/hooks/useAuthState";
 
 export const SignInButton = () => {
-    // const [showIcon, setShowIcon] = useState(false);
 
-    // useEffect(() => {
-    //     authFirebase.onAuthStateChanged((user) => {
-    //         if (user) {
-    //             setShowIcon(false);
-    //         } else {
-    //             setShowIcon(true);
-    //         }
-    //     })
-    // }, [])
-
-    // const [value, loading, error] = useAuthState(authFirebase);
-    // console.log(value)
-
-    const { value } = useAuthStateCustom(authFirebase);
+    const [value, loading, error] = useAuthState(authFirebase);
 
     return (
         <>
