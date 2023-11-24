@@ -4,6 +4,8 @@ import ProfilePinsList from "./ProfilePinsList";
 import ProfilePinsSection from "./ProfilePinsSection";
 import SideBar from "./SideBar";
 import WorkspaceHeader from "./WorkspaceHeader";
+import {Modal} from "./Modal";
+import { IconClose } from "./IconClose";
 
 export {
     ProfileImage,
@@ -11,5 +13,7 @@ export {
     ProfilePinsList,
     ProfilePinsSection,
     SideBar,
-    WorkspaceHeader
+    WorkspaceHeader,
+    Modal,
+    IconClose
 }
