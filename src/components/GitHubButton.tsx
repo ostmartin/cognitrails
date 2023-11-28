@@ -1,11 +1,9 @@
 'use client'
 import { GithubAuthProvider, signInWithPopup } from 'firebase/auth';
-import { useRouter } from 'next/navigation';
 
 import { authFirebase } from '@/firebase-admin/firebase';
 
-export const GitHubButton = () => {
-    const router = useRouter();
+export const GitHubButton = ({onClick}: {onClick:() => void}) => {
 
     const handleGithubAuth = () => {
         
@@ -13,7 +11,7 @@ export const GitHubButton = () => {
 
         signInWithPopup(authFirebase, provider)
             .then(() => {
-                router.push('/workspace/profile')
+                onClick();
             })
             .catch(console.log)
     }
