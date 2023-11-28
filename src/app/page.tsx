@@ -3,18 +3,13 @@ import Link from "next/link";
 import { UserIcon } from "@/components/UserIcon";
 import { SignInButton } from "@/components/SignInButton";
 
-import { Modal, IconClose } from "@/components";
+import { Modal } from "@/components";
 import { GitHubButton } from "@/components/GitHubButton";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 import logo from '../../public/cognitrails-logo.png';
 
-const StarterPage: React.FC = async () => {
-
-    const onClose = async () => {
-        'use server'
-        console.log('closed')
-    }
-
+const StarterPage: React.FC = () => {
     return (
         <>
             <header className="font-bold h-20">
@@ -32,6 +27,7 @@ const StarterPage: React.FC = async () => {
                         </Link>
                     </div>
                     <div className="flex items-center gap-2 h-full">
+                        <ThemeSwitcher/>
                         <SignInButton/>
                         <UserIcon/>
                     </div>
@@ -44,7 +40,7 @@ const StarterPage: React.FC = async () => {
                     <Link className="text-white bg-black rounded-md py-2 px-4 font-bold" href="/workspace/trails">Start your own trail</Link>
                 </section>
             </main>
-            <Modal onClose={onClose}>
+            <Modal>
                 <h2>Login</h2>
                 <p>Choose an authorization method</p>
                 <GitHubButton/>

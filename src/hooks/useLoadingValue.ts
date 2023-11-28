@@ -1,3 +1,7 @@
+/*
+    Hook copied from react-firebase-hooks
+*/
+
 import { useMemo, useCallback, useReducer } from "react";
 
 type LoadingValue<T, E> = {

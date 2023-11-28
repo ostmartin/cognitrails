@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.9",
     "@reduxjs/toolkit": "^1.9.7",
     "firebase": "^10.6.0",
+    "framer-motion": "^10.16.5",
     "next": "14.0.2",
+    "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
     "react-firebase-hooks": "^5.1.1",

@@ -12,7 +12,6 @@ export const Modal = ({ children, onClose }: Props) => {
     const searchParams = useSearchParams();
     const showModal = searchParams.get('sign-in');
     const modalRef = useRef<null | HTMLDialogElement>(null);
-    console.log(showModal);
 
     useEffect(() => {
         if (showModal === 'y') {
