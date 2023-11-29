@@ -16,7 +16,7 @@ export const SignOutButton = () => {
     const handleSignOut = async () => {
         const result = await signOut();
         setStatus(prev => result);
-        router.push('/');
+        router.replace('/');
     }
 
     return (

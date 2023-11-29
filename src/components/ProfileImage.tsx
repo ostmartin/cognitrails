@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Skeleton from "@/public/ProfileSkeleton.png";
 
 type ProfileImageProps = {
     handlePhotoChange: () => void;
@@ -20,7 +21,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({handlePhotoChange, image, al
                     />
                 ) : (
                     <Image
-                        src="/ProfileSkeleton.png"
+                        src={Skeleton}
                         alt="Default Photo"
                         width={300}
                         height={300}

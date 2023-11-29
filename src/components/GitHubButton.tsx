@@ -1,22 +1,23 @@
 'use client'
 import { GithubAuthProvider, signInWithPopup } from 'firebase/auth';
+import { useState } from 'react';
 
 import { authFirebase } from '@/firebase-admin/firebase';
+import { Button } from '@nextui-org/button';
 
 export const GitHubButton = ({onClick}: {onClick:() => void}) => {
+    const [loading, setLoading] = useState<boolean>(false);
 
-    const handleGithubAuth = () => {
-        
+    const handleGithubAuth = async () => {
+        setLoading(true);
         const provider = new GithubAuthProvider();
 
-        signInWithPopup(authFirebase, provider)
-            .then(() => {
-                onClick();
-            })
-            .catch(console.log)
+        await signInWithPopup(authFirebase, provider);
+        onClick();
+        setLoading(false);
     }
 
     return (
-        <button className="bg-black text-white rounded-lg px-4 py-1 max-w-[100px]" onClick={handleGithubAuth}>GitHub</button>
+        <Button color="default" onClick={handleGithubAuth} isLoading={loading}>GitHub</Button>
     )
 }

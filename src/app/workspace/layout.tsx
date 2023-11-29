@@ -26,7 +26,7 @@ const WorkspaceLayout = ({
             <SideBar links={LINKS}/>
             <div className="h-screen w-[100vw] tablet:w-[85vw]">
                 <WorkspaceHeader/>
-                <section className="overflow-auto h-[95%]">
+                <section className="overflow-auto h-[95%] p-6">
                     {children}                    
                 </section>
             </div>
