@@ -1,9 +1,11 @@
 /*
     Hook copied from react-firebase-hooks
+    https://github.com/CSFrequency/react-firebase-hooks
 */
 
 import { useEffect } from "react";
-import { onAuthStateChanged, Auth, User } from "firebase/auth";
+import type { Auth, User } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import useLoadingValue from "./useLoadingValue";
 
 

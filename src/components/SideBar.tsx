@@ -1,4 +1,19 @@
-import Link from "next/link";
+'use client'
+
+import { Link } from "@nextui-org/link";
+import { Button } from "@nextui-org/button";
+import NextImage from "next/image";
+import {
+    Navbar, 
+    NavbarContent, 
+    NavbarItem,
+    NavbarBrand
+} from "@nextui-org/navbar";
+
+import { MyNavbarItem } from "./MyNavbarItem";
+import { SignOutButton } from "./SignOutButton";
+
+import logo from '../public/cognitrails-logo.png';
 
 type SideBarProps = {
     links: {
@@ -7,22 +22,37 @@ type SideBarProps = {
     }[]
 }
 
-const SideBar: React.FC<SideBarProps> = async ({links}) => {
-    return (
-        <nav className="justify-between flex-col border-r-2 h-screen w-[15vw] pt-4 hidden tablet:flex">
-            <ul className="flex flex-col gap-3">
+const SideBar: React.FC<SideBarProps> = ({links}) => {
+
+    return (      
+        <Navbar
+            classNames={{
+                base: "w-fit border-2 rounded-lg justify-between",
+                wrapper: "flex-col max-w-[15vw] h-full py-4",
+                content: "flex-col items-start mt-8",
+                brand: "grow-0"
+            }}
+        >
+            <NavbarBrand>
+                <NextImage
+                    src={logo}
+                    width={40}
+                    height={40}
+                    alt="CogniTraills"
+                    className="flex rounded-md"
+                />
+            </NavbarBrand>
+            <NavbarContent>
                 {
-                    links.map(link => (
-                        <li>
-                            <Link href={link.url}>
-                                {link.title}
-                            </Link>
-                        </li>
+                    links.map((link, i) => (
+                        <MyNavbarItem key={i} url={link.url} title={link.title}/>
                     ))
                 }
-            </ul>
-            <Link href="/">Log Out</Link>
-        </nav>        
+                <NavbarItem className="mt-auto">
+                    <SignOutButton/>
+                </NavbarItem>
+            </NavbarContent>
+        </Navbar>
     )
 }
 

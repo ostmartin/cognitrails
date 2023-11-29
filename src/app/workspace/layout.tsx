@@ -1,7 +1,7 @@
 import SideBar from "@/components/SideBar";
 import WorkspaceHeader from "@/components/WorkspaceHeader";
 
-const LINKS: any[] = [
+const LINKS: {title: string, url: string}[] = [
     {
         title: 'Profile',
         url: '/workspace/profile'

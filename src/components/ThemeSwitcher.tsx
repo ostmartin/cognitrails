@@ -1,8 +1,10 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { Button } from "@nextui-org/button";
+import { Switch } from "@nextui-org/switch";
 import { useTheme } from "next-themes";
+
+import { SunFilledIcon, MoonFilledIcon } from '@/components/icons';
 
 export const ThemeSwitcher = () => {
     const [mounted, setMounted] = useState(false);
@@ -23,10 +25,13 @@ export const ThemeSwitcher = () => {
     if (!mounted) return null;
 
     return (
-        <Button 
-            onClick={onChangeTheme}
-        >
-            {theme === 'light' ? 'Dark mode' : 'Light mode'}
-        </Button>
+        <Switch
+            onChange={onChangeTheme}
+            defaultSelected
+            size="lg"
+            color="default"
+            startContent={<SunFilledIcon size={20}/>}
+            endContent={<MoonFilledIcon size={20}/>}
+        />
     )
 }

@@ -1,10 +1,33 @@
-import Link from "next/link";
+import { Link } from "@nextui-org/link";
+import { Button } from "@nextui-org/button";
+import {
+    Navbar, 
+    NavbarContent, 
+    NavbarItem
+  } from "@nextui-org/navbar";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 const WorkspaceHeader: React.FC = async () => {
     return (
-        <header className="flex justify-end items-center w-full border-b-2 h-[5%]">
-            <Link href="/workspace/trails">Create new trail</Link>
-        </header>
+        <Navbar
+            classNames={{
+                base: "border-2 w-full rounded-lg"
+            }}
+        >
+            <NavbarContent justify="end">
+                <NavbarItem>
+                    <ThemeSwitcher/>
+                </NavbarItem>
+                <NavbarItem>
+                    <Button
+                        as={Link}
+                        href="/workspace/trails"
+                    >
+                        Create new trail
+                    </Button>
+                </NavbarItem>
+            </NavbarContent>
+        </Navbar>
     )
 }
 
