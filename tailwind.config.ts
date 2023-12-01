@@ -15,7 +15,7 @@ const config: Config = {
     },
     extend: {
       gridTemplateColumns: {
-        "responsive": "repeat(auto-fit, minmax(min(100px, 100%), 1fr))",
+        "responsive": "repeat(auto-fit, minmax(min(150px, 100%), 1fr))",
       }
     },
   },

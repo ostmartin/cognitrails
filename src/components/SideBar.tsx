@@ -25,7 +25,7 @@ const SideBar: React.FC<SideBarProps> = ({links}) => {
     return (      
         <Navbar
             classNames={{
-                base: "w-fit min-w-[200px] hidden tablet:flex justify-between backdrop-saturate-100 p-2",
+                base: "w-fit min-w-[200px] hidden tablet:flex desktop:min-w-[300px] justify-between backdrop-saturate-100 p-2 transition-all",
                 wrapper: "flex-col h-full p-0 bg-[#2C3440] py-4 rounded-lg",
                 content: "flex-col items-start mt-8 w-full",
                 brand: "grow-0"
