@@ -11,8 +11,8 @@ export const MyNavbarItem = ({url, title}: {
     const pathname = usePathname();
 
     return (
-        <NavbarItem className="w-full">
-            <Link className="font-bold text-lg flex w-full" color="primary" isBlock href={url}>
+        <NavbarItem className="w-full text-center">
+            <Link className="font-bold text-lg flex justify-center w-full" color="primary" isBlock href={url}>
                 {title}
             </Link>
         </NavbarItem>
