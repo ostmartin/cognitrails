@@ -11,7 +11,9 @@ const WorkspaceHeader: React.FC = async () => {
     return (
         <Navbar
             classNames={{
-                base: "border-2 w-full rounded-lg"
+                base: "grow h-fit max-h-[90px] p-2 bg-inherit backdrop-saturate-100",
+                content: "w-full bg-[#2C3440] px-4 rounded-lg",
+                wrapper: "min-w-full p-0"
             }}
         >
             <NavbarContent justify="end">
@@ -22,6 +24,8 @@ const WorkspaceHeader: React.FC = async () => {
                     <Button
                         as={Link}
                         href="/workspace/trails"
+                        color="primary"
+                        className="font-bold"
                     >
                         Create new trail
                     </Button>

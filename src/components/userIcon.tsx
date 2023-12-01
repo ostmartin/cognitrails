@@ -1,8 +1,8 @@
 'use client'
 
 import { Link, Avatar } from "@nextui-org/react";
-import { authFirebase } from "@/firebase-admin/firebase";
-import { useAuthState } from "@/hooks/useAuthState";
+import { authFirebase } from "firebase-admin/firebase";
+import { useAuthState } from "hooks/useAuthState";
 
 export const UserIcon = () => {
     const [value, loading, error] = useAuthState(authFirebase);
@@ -12,7 +12,7 @@ export const UserIcon = () => {
             {
                 value ?
                 <Link href='/workspace/profile'>
-                    <Avatar isBordered color="default"/>
+                    <Avatar isBordered color="primary"/>
                 </Link> : null
             }
         </>

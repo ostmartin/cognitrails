@@ -25,9 +25,9 @@ const SideBar: React.FC<SideBarProps> = ({links}) => {
     return (      
         <Navbar
             classNames={{
-                base: "w-fit border-2 rounded-lg justify-between",
-                wrapper: "flex-col max-w-[15vw] h-full py-4",
-                content: "flex-col items-start mt-8",
+                base: "w-fit min-w-[200px] hidden tablet:flex justify-between backdrop-saturate-100 p-2",
+                wrapper: "flex-col h-full p-0 bg-[#2C3440] py-4 rounded-lg",
+                content: "flex-col items-start mt-8 w-full",
                 brand: "grow-0"
             }}
         >
@@ -46,7 +46,7 @@ const SideBar: React.FC<SideBarProps> = ({links}) => {
                         <MyNavbarItem key={i} url={link.url} title={link.title}/>
                     ))
                 }
-                <NavbarItem className="mt-auto">
+                <NavbarItem className="mt-auto w-full">
                     <SignOutButton/>
                 </NavbarItem>
             </NavbarContent>

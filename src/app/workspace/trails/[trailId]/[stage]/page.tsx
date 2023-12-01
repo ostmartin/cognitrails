@@ -1,4 +1,4 @@
-import { T_TrailStage } from "@/types/data";
+import { T_TrailStage } from "types/data";
 
 const TrailStagePage: React.FC<T_TrailStage> = ({title, goals, projects, additional}) => {
     return (

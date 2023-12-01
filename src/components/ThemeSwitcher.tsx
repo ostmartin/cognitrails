@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Switch } from "@nextui-org/switch";
 import { useTheme } from "next-themes";
 
-import { SunFilledIcon, MoonFilledIcon } from '@/components/icons';
+import { SunFilledIcon, MoonFilledIcon } from 'components/icons';
 
 export const ThemeSwitcher = () => {
     const [mounted, setMounted] = useState(false);
@@ -29,7 +29,7 @@ export const ThemeSwitcher = () => {
             onChange={onChangeTheme}
             defaultSelected
             size="lg"
-            color="default"
+            color="primary"
             startContent={<SunFilledIcon size={20}/>}
             endContent={<MoonFilledIcon size={20}/>}
         />

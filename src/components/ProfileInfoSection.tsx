@@ -1,8 +1,9 @@
 'use client'
 
 import { useState } from "react";
-import { T_User } from "@/types/data";
-import { ProfileImage } from ".";
+import { Avatar } from "@nextui-org/avatar";
+
+import { T_User } from "types/data";
 
 type ProfileSectionProps = {
     user: T_User;
@@ -11,36 +12,20 @@ type ProfileSectionProps = {
 const ProfileInfoSection: React.FC<ProfileSectionProps> = ({user}) => {
     const {nickname, name, location, blog, photo} = user;
 
-    const [userImage, setUserImage] = useState<string | null>(photo || null);
-
-    const handlePhotoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const file = event.target.files?.[0];
-
-        if (file) {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                const uploadedPhoto = reader.result as string;
-                setUserImage(uploadedPhoto);
-
-                //Здесь можно добавить запрос к серверу
-            }
-            reader.readAsDataURL(file);
-        }
-    }
-
     return(
-        <section className="flex justify-between m-auto max-w-7xl">
-            <div>
-                <h2>{nickname}</h2>
-                <p>{name}</p>
+        <section className="flex justify-around mb-16 m-auto max-w-7xl flex-col tablet:flex-row">
+            <div className="grow grid grid-cols-1 p-10 gap-2 text-center tablet:text-left">
+                <h2 className="text-4xl">{nickname}</h2>
+                <p className="italic">({name})</p>
                 <p>{location}</p>
-                <p>{blog}</p>
+                <p className="justify-self-center">{blog}</p>
             </div>
-            <ProfileImage
-                image={userImage as string}
-                alt={name as string}
-                handlePhotoChange={handlePhotoChange as () => void}
-            />
+            <div className="grow flex items-center justify-center">
+                <Avatar
+                    src={photo ? photo : undefined}
+                    className="min-h-[120px] min-w-[120px] max-w-full max-h-full m-auto"
+                />
+            </div>
         </section>
     )
 }

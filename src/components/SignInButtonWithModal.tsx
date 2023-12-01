@@ -1,7 +1,7 @@
 'use client'
 
-import { authFirebase } from "@/firebase-admin/firebase";
-import { useAuthState } from "@/hooks/useAuthState";
+import { authFirebase } from "firebase-admin/firebase";
+import { useAuthState } from "hooks/useAuthState";
 
 import { SignInModal } from "./SigninModal";
 

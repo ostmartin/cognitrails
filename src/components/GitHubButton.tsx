@@ -2,7 +2,7 @@
 import { GithubAuthProvider, signInWithPopup } from 'firebase/auth';
 import { useState } from 'react';
 
-import { authFirebase } from '@/firebase-admin/firebase';
+import { authFirebase } from 'firebase-admin/firebase';
 import { Button } from '@nextui-org/button';
 
 export const GitHubButton = ({onClick}: {onClick:() => void}) => {

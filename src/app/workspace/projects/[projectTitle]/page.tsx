@@ -1,4 +1,4 @@
-import { T_Project } from "@/types/data";
+import { T_Project } from "types/data";
 
 const SingleProject: React.FC<T_Project> = ({url, title, description, features, stack}) => {
     return (

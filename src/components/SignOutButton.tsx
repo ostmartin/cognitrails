@@ -2,8 +2,8 @@
 
 import { Button } from "@nextui-org/button";
 
-import { authFirebase } from "@/firebase-admin/firebase";
-import useSignOut from "@/hooks/useSignOut";
+import { authFirebase } from "firebase-admin/firebase";
+import useSignOut from "hooks/useSignOut";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -20,6 +20,6 @@ export const SignOutButton = () => {
     }
 
     return (
-        <Button color="default" onClick={handleSignOut} isLoading={loading}>Log Out</Button>
+        <Button className="font-bold flex m-auto" color="primary" onClick={handleSignOut} isLoading={loading}>Log Out</Button>
     )
 }

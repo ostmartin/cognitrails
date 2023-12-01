@@ -1,5 +1,5 @@
-import SideBar from "@/components/SideBar";
-import WorkspaceHeader from "@/components/WorkspaceHeader";
+import SideBar from "components/SideBar";
+import WorkspaceHeader from "components/WorkspaceHeader";
 
 const LINKS: {title: string, url: string}[] = [
     {
@@ -22,11 +22,11 @@ const WorkspaceLayout = ({
     children: React.ReactNode
 }) => {
     return (
-        <main className="m-auto px-2 flex h-full">
+        <main className="m-auto px-2 flex h-full w-full">
             <SideBar links={LINKS}/>
-            <div className="h-screen w-[100vw] tablet:w-[85vw]">
+            <div className="h-screen grow flex flex-col">
                 <WorkspaceHeader/>
-                <section className="overflow-auto h-[95%] p-6">
+                <section className="overflow-auto grow p-6">
                     {children}                    
                 </section>
             </div>

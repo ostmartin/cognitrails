@@ -13,7 +13,11 @@ const config: Config = {
       'desktop': '1280px',
       'tablet': '768px'
     },
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        "responsive": "repeat(auto-fit, minmax(min(100px, 100%), 1fr))",
+      }
+    },
   },
   darkMode: 'class',
   plugins: [
@@ -28,14 +32,22 @@ const config: Config = {
           layout: {}, // light theme layout tokens
           colors: {
             background: '#FAFAFA',
-            foreground: '#282846'
+            foreground: '#29A19C',
+            primary: {
+              DEFAULT: '#29A19C',
+              foreground: '#FFFFFF'
+            }
           }, // light theme colors
         },
         dark: {
           layout: {}, // dark theme layout tokens
           colors: {
             background: '#222831',
-            foreground: '#F9F9F9'
+            foreground: '#29A19C',
+            primary: {
+              DEFAULT: '#29A19C',
+              foreground: '#FFFFFF'
+            }
           }, // dark theme colors
         },
         // ... custom themes
