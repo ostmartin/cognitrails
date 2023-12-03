@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 
 import { SunFilledIcon, MoonFilledIcon } from 'components/icons';
 
-export const ThemeSwitcher = () => {
+export const ThemeSwitcher: React.FC = () => {
     const [mounted, setMounted] = useState(false);
     const { theme, setTheme } = useTheme();
 

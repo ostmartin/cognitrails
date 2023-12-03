@@ -9,7 +9,7 @@ type ProfileSectionProps = {
     user: T_User;
 }
 
-const ProfileInfoSection: React.FC<ProfileSectionProps> = ({user}) => {
+export const ProfileInfoSection: React.FC<ProfileSectionProps> = ({user}) => {
     const {nickname, name, location, blog, photo} = user;
 
     return(
@@ -28,6 +28,4 @@ const ProfileInfoSection: React.FC<ProfileSectionProps> = ({user}) => {
             </div>
         </section>
     )
-}
-
-export default ProfileInfoSection;
+};

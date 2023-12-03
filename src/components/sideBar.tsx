@@ -8,8 +8,8 @@ import {
     NavbarBrand
 } from "@nextui-org/navbar";
 
-import { MyNavbarItem } from "./MyNavbarItem";
-import { SignOutButton } from "./SignOutButton";
+import { MyNavbarItem } from "./myNavbarItem";
+import { SignOutButton } from "./signOutButton";
 
 import logo from '../public/cognitrails-logo.png';
 
@@ -20,13 +20,13 @@ type SideBarProps = {
     }[]
 }
 
-const SideBar: React.FC<SideBarProps> = ({links}) => {
+export const SideBar: React.FC<SideBarProps> = ({links}) => {
 
     return (      
         <Navbar
             classNames={{
-                base: "w-fit min-w-[200px] hidden tablet:flex desktop:min-w-[300px] justify-between backdrop-saturate-100 p-2 transition-all",
-                wrapper: "flex-col h-full p-0 bg-[#2C3440] py-4 rounded-lg",
+                base: "w-fit min-w-[200px] hidden tablet:flex desktop:min-w-[300px] justify-between backdrop-saturate-100 p-2 transition-[min-width]",
+                wrapper: "flex-col h-full p-0 bg-secondary py-4 rounded-lg shadow-lg",
                 content: "flex-col items-start mt-8 w-full",
                 brand: "grow-0"
             }}
@@ -52,6 +52,4 @@ const SideBar: React.FC<SideBarProps> = ({links}) => {
             </NavbarContent>
         </Navbar>
     )
-}
-
-export default SideBar;
+};

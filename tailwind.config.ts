@@ -36,6 +36,9 @@ const config: Config = {
             primary: {
               DEFAULT: '#29A19C',
               foreground: '#FFFFFF'
+            },
+            secondary: {
+              DEFAULT: "#FFFFFF"
             }
           }, // light theme colors
         },
@@ -47,6 +50,9 @@ const config: Config = {
             primary: {
               DEFAULT: '#29A19C',
               foreground: '#FFFFFF'
+            },
+            secondary: {
+              DEFAULT: "#2C3440"
             }
           }, // dark theme colors
         },

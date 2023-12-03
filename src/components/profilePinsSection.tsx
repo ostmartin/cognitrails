@@ -1,6 +1,6 @@
-import { ProfilePinsList } from "./";
+import { ProfilePinsList } from ".";
 
-const ProfilePinsSection: React.FC = async () => {
+export const ProfilePinsSection: React.FC = async () => {
     return (
         <section className="m-auto max-w-7xl">
             <ProfilePinsList
@@ -12,5 +12,3 @@ const ProfilePinsSection: React.FC = async () => {
         </section>
     )
 }
-
-export default ProfilePinsSection;

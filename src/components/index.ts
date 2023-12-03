@@ -1,9 +1,14 @@
-import ProfileInfoSection from "./ProfileInfoSection";
-import ProfilePinsList from "./ProfilePinsList";
-import ProfilePinsSection from "./ProfilePinsSection";
-import SideBar from "./SideBar";
-import WorkspaceHeader from "./WorkspaceHeader";
-import { IconClose } from "./IconClose";
+import { ProfileInfoSection } from "./profileInfoSection";
+import { ProfilePinsList } from "./profilePinsList";
+import { ProfilePinsSection } from "./profilePinsSection";
+import { SideBar } from "./sideBar";
+import { WorkspaceHeader } from "./workspaceHeader";
+import { GitHubButton } from "./gitHubButton";
+import { MyNavbarItem } from "./myNavbarItem";
+import { SignInButtonWithModal } from "./signInButtonWithModal";
+import { SignOutButton } from "./signOutButton";
+import { ThemeSwitcher } from "./themeSwitcher";
+import { UserIcon } from "./userIcon";
 
 export {
     ProfileInfoSection,
@@ -11,5 +16,10 @@ export {
     ProfilePinsSection,
     SideBar,
     WorkspaceHeader,
-    IconClose
+    GitHubButton,
+    MyNavbarItem,
+    SignInButtonWithModal,
+    SignOutButton,
+    ThemeSwitcher,
+    UserIcon
 }

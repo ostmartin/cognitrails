@@ -10,14 +10,14 @@ import {
 } from "@nextui-org/modal";
 import {Button} from "@nextui-org/button";
 
-import { GitHubButton } from "./GitHubButton";
+import { GitHubButton } from "./gitHubButton";
 
 export const SignInModal = () => {
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
     return (
         <>
-            <Button onClick={onOpen}>
+            <Button color="primary" className="font-bold" onClick={onOpen}>
                 Sign In
             </Button>
             <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="center" backdrop="blur"

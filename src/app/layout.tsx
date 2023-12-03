@@ -20,7 +20,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='m-auto w-full tracking-widest'>
+        <div className='m-auto w-full h-full tracking-widest'>
           <Providers>
             {children}
           </Providers>

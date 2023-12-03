@@ -18,6 +18,6 @@ export const GitHubButton = ({onClick}: {onClick:() => void}) => {
     }
 
     return (
-        <Button color="default" onClick={handleGithubAuth} isLoading={loading}>GitHub</Button>
+        <Button color="default" variant="ghost" className="font-bold" onClick={handleGithubAuth} isLoading={loading}>GitHub</Button>
     )
 }

@@ -3,7 +3,7 @@
 import { authFirebase } from "firebase-admin/firebase";
 import { useAuthState } from "hooks/useAuthState";
 
-import { SignInModal } from "./SigninModal";
+import { SignInModal } from "./signinModal";
 
 export const SignInButtonWithModal = () => {
 

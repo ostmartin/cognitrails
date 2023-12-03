@@ -5,15 +5,15 @@ import {
     NavbarContent, 
     NavbarItem
   } from "@nextui-org/navbar";
-import { ThemeSwitcher } from "./ThemeSwitcher";
+import { ThemeSwitcher } from "./themeSwitcher";
 
-const WorkspaceHeader: React.FC = async () => {
+export const WorkspaceHeader: React.FC = async () => {
     return (
         <Navbar
             classNames={{
-                base: "grow h-fit max-h-[90px] p-2 bg-inherit backdrop-saturate-100",
-                content: "w-full bg-[#2C3440] px-4 rounded-lg",
-                wrapper: "min-w-full p-0"
+                base: "grow h-fit max-h-[90px] p-2 bg-inherit backdrop-saturate-100 transition-all backdrop-saturate-100",
+                content: "w-full px-4",
+                wrapper: "min-w-full p-0 bg-secondary rounded-lg shadow-lg"
             }}
         >
             <NavbarContent justify="end">
@@ -34,5 +34,3 @@ const WorkspaceHeader: React.FC = async () => {
         </Navbar>
     )
 }
-
-export default WorkspaceHeader;

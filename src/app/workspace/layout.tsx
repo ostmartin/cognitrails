@@ -1,5 +1,6 @@
-import SideBar from "components/SideBar";
-import WorkspaceHeader from "components/WorkspaceHeader";
+import { SideBar } from "components";
+import { WorkspaceHeader } from "components";
+import { GlobalAuthProvider } from "./globalAuthProvider";
 
 const LINKS: {title: string, url: string}[] = [
     {
@@ -22,15 +23,17 @@ const WorkspaceLayout = ({
     children: React.ReactNode
 }) => {
     return (
-        <main className="m-auto px-2 flex h-full w-full">
-            <SideBar links={LINKS}/>
-            <div className="h-screen grow flex flex-col">
-                <WorkspaceHeader/>
-                <section className="overflow-auto grow p-6">
-                    {children}                    
-                </section>
-            </div>
-        </main>
+        <GlobalAuthProvider>
+            <main className="m-auto px-2 flex h-full w-full">
+                <SideBar links={LINKS}/>
+                <div className="h-screen grow flex flex-col">
+                    <WorkspaceHeader/>
+                    <section className="overflow-auto grow p-6">
+                        {children}                    
+                    </section>
+                </div>
+            </main>
+        </GlobalAuthProvider>
     )
 }
 
