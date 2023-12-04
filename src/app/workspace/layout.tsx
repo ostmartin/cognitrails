@@ -17,11 +17,13 @@ const LINKS: {title: string, url: string}[] = [
     }
 ]
 
+
 const WorkspaceLayout = ({
     children,
 }: {
     children: React.ReactNode
 }) => {
+
     return (
         <GlobalAuthProvider>
             <main className="m-auto px-2 flex h-full w-full">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import '../firebase-admin/firebase';
+import '../firebase-admin/firebase-web-app';
 import { Providers } from './providers';
 import 'globals.css';
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { Link, Avatar } from "@nextui-org/react";
-import { authFirebase } from "firebase-admin/firebase";
+import { authFirebase } from "firebase-admin/firebase-web-app";
 import { useAuthState } from "hooks/useAuthState";
 
 export const UserIcon: React.FC = () => {

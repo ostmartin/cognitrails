@@ -31,10 +31,7 @@ export const useAuthState = (auth: Auth, options?: AuthStateOptions): AuthStateH
                         setError(e as Error);
                     }
                 }
-
-                if (user) {
-                    setValue(user);
-                }
+                setValue(user);
             }     
         );
 

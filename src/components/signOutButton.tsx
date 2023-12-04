@@ -2,7 +2,7 @@
 
 import { Button } from "@nextui-org/button";
 
-import { authFirebase } from "firebase-admin/firebase";
+import { authFirebase } from "firebase-admin/firebase-web-app";
 import useSignOut from "hooks/useSignOut";
 import { useState } from "react";
 import { useRouter } from "next/navigation";

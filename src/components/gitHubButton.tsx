@@ -2,10 +2,10 @@
 import { GithubAuthProvider, signInWithPopup } from 'firebase/auth';
 import { useState } from 'react';
 
-import { authFirebase } from 'firebase-admin/firebase';
+import { authFirebase } from 'firebase-admin/firebase-web-app';
 import { Button } from '@nextui-org/button';
 
-export const GitHubButton = ({onClick}: {onClick:() => void}) => {
+export const GitHubButton = ({onClick}: {onClick?:() => void}) => {
     const [loading, setLoading] = useState<boolean>(false);
 
     const handleGithubAuth = async () => {
@@ -13,7 +13,7 @@ export const GitHubButton = ({onClick}: {onClick:() => void}) => {
         const provider = new GithubAuthProvider();
 
         await signInWithPopup(authFirebase, provider);
-        onClick();
+        onClick?.();
         setLoading(false);
     }
 
